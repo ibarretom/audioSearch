@@ -1,0 +1,79 @@
+<html lang='pt-br'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<style>
+    /* Para ficar vermelho quando começar a gravar */
+    .microphone-started {
+      color: red;
+    }
+
+    button {
+      padding: 4px 15px 4px 15px;
+      width: 54px;
+      height: 36px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+
+    div.form-search div.input-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      border-radius: 50px;
+      padding: 0px 16px;
+      background-color: rgb(245, 245, 245);
+    }
+
+    div.form-search div.input-group div {
+      display: flex;
+      
+    }
+    
+    div.form-search div.input-group input {
+      width: 80%;
+      border: none;
+      line-height: 24px;
+      background-color: transparent;
+      box-shadow: none;
+      outline: none;
+      cursor: text;
+    }
+
+    div.form-search div.input-group-append{
+      display: inline-block;
+    }
+    i{
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-search">
+    <div class="input-group">
+      <input aria-label="Buscas" class="UI-SEARCH input-text form-control form-control-lg pl-4" type="text"
+        autocomplete="off" name="q" value="" maxlength="500"
+        placeholder="Busque por nome, código, modelo e muito mais...">
+      <div class="input-group-append">
+        <button type="text" aria-label="Buscas-voz" title="Busca-voz" class="btn btn-light legitRipple"><span><span><i
+                class="base-set-icon-search" style="border-radius: 0px !important;"></i></span><i class="fas fa-microphone-alt"></i></span></button>
+        <button type="submit" aria-label="Buscas" title="Buscas" class="btn btn-light legitRipple"><span><span><i
+                class="base-set-icon-search"></i><i class="fas fa-search"></i></span></span></button>
+      </div>
+      <div class="searchautocomplete-loader UI-LOADER" style="display:none;"></div>
+    </div>
+    <div style="display:none" class="p-0 searchautocomplete-placeholder UI-PLACEHOLDER"></div>
+  </div>
+
+  <div class="resultado"></div>
+
+  <script src="speech.js"></script>
+</body>
+
+</html>
